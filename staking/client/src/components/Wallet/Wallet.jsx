@@ -58,7 +58,7 @@ const wallet = ({children}) => {
   };
 
   return (
-    <div>
+    <div className="Connect-Wallet">
       <Web3Context.Provider value={state}>
         {children}
       </Web3Context.Provider>
