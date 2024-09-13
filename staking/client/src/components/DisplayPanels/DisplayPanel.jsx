@@ -1,10 +1,11 @@
 import EarnedReward from "./EarnedReward";
 import RewardRate from "./RewardRate";
 import StakedAmount from "./StakedAmount";
+import "./DisplayPanel.css";
 
 const DisplayPanel = () => {
     return (
-        <div>
+        <div className="top-wrapper">
             <StakedAmount />
             <RewardRate />
             <EarnedReward />

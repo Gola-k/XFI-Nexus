@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import Web3Context from "../../context/Web3Context";
 import { ethers } from "ethers";
+import "./DisplayPanel.css";
 
 const EarnedReward = () => {
     const {stakingContract, account} = useContext(Web3Context);
@@ -18,11 +19,18 @@ const EarnedReward = () => {
                 console.error("Error fetching staked balance: ", error);
             }
         }
-        stakingContract && fetchEarnedReward()
+
+        const interval = setInterval(() => {
+            stakingContract && fetchEarnedReward()
+        }, 20000);
+        return () => clearInterval(interval);
     }, [stakingContract, account]);
 
     return (
-        <p>Earned Reward: {earnedReward}</p>
+        <div className="earned-reward">
+            <p>Earned Reward: </p>
+            <span>{earnedReward}</span>
+        </div>
     )
 }
 

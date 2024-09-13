@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { connectWallet } from "../../utils/connectWallet";
 import Web3Context from "../../context/Web3Context";
 import Button from "../Button/Button";
+import toast from "react-hot-toast";
+import "./Wallet.css";
 import { handleAccountChange } from "../../utils/handleAccountChange";
 import { handleChainChange } from "../../utils/handleChainChange";
 
@@ -34,11 +36,11 @@ const wallet = ({children}) => {
         stakeTokenContract,
         chainId,
       } = await connectWallet();
-      console.log("Provider: ", provider);
-      console.log("Account: ", selectedAccount);
-      console.log("Staking Contract: ", stakingContract);
-      console.log("Stake Token Contract: ", stakeTokenContract);
-      console.log("Chain ID: ", chainId);
+      // console.log("Provider: ", provider);
+      // console.log("Account: ", selectedAccount);
+      // console.log("Staking Contract: ", stakingContract);
+      // console.log("Stake Token Contract: ", stakeTokenContract);
+      // console.log("Chain ID: ", chainId);
 
       setState({
         provider,
@@ -48,6 +50,7 @@ const wallet = ({children}) => {
         chainId,
       });
     } catch (error) {
+      toast.error("Error connecting wallet")
       console.error("Error collecting wallet: ", error);
     } finally {
       setIsLoading(false);
