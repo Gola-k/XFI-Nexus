@@ -1,0 +1,246 @@
+/* Navbar Container */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gowun Batang", serif;
+  font-style: normal;
+}
+input[type="text"] {
+  border: none;             /* No border */
+  outline: none;           /* No outline */
+  background: transparent; /* Transparent background */
+  width: auto;             /* Adjust width as needed */
+  font-size: 16px;         /* Font size */
+  color: white;             /* Text color */
+  appearance: none;        /* Remove default styling */
+}
+.crypto {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("../src/assets/image/image 2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the image covers the entire section */
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Navigation List */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Navigation Item */
+.nav-item {
+  display: inline;
+}
+
+/* Web3Button Styles */
+.web3-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w3m-button {
+  background-color: #0066ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.w3m-button:hover {
+  background-color: #0055cc;
+}
+
+/* Main Content */
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  color: #fff;
+}
+
+/* Left Side Content */
+.left-side {
+  flex-basis: 33%;
+}
+.left-side span {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.left-side h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.left-side p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* Button Toggle Container */
+.button-toggle-container {
+  display: flex;
+  flex-direction: column; /* Adjusted to stack content vertically */
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(105, 179, 228, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.2px);
+  -webkit-backdrop-filter: blur(3.2px);
+  border-radius: 10px;
+  width: 400px; /* Defines the width for the entire button area */
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px; 
+  /* Adjusted spacing */
+}
+
+/* Wrapper for buttons */
+.buttons-wrapper {
+  display: flex;
+  height: auto;
+  /* margin-left: -40px; */
+  margin-bottom: 5%;
+}
+
+/* When all buttons are shown, expand the width with smooth animation */
+.buttons-wrapper.show-all {
+  width: 100%; /* Expands to full width */
+}
+
+/* Individual Token Button */
+.token-button {
+  background-color: #0d0f18;
+  color: #fff;
+  border: 1px solid #0066ff;
+  border-radius: 50px;
+  padding: 2px 20px;
+  font-size: 0.9rem;
+  margin: 5px 0 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.token-button:nth-child(-n + 2) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.buttons-wrapper.show-all .token-button {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.token-button:hover {
+  background-color: #0055cc;
+  box-shadow: 0.2em 0.1em 0.1em 0.3em skyblue;
+  background-color: blue;
+  border-color: black;
+  color: #fff;
+}
+
+.arrow-btn:active {
+  background-color: #0055cc;
+  box-shadow: 0.3em 0.3em 0 white;
+  background-color: blue;
+  border-color: black;
+  color: #fff;
+}
+
+.arrow-btn {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-btn:hover {
+  background-color: #0055cc;
+}
+
+/* Balance Amount Section */
+.balance-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.balance-amount h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-right: 50px;
+}
+
+.send-btn {
+  background-color: #0066ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #0055cc;
+}
+
+/* Right Side Content */
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -60px 0 0px;
+}
+
+.stats {
+  margin: 30px;
+  text-align: left;
+  line-height: 7em;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.floating-crypto img {
+  max-width: 300px;
+}

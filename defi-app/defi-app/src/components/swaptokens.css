@@ -1,0 +1,56 @@
+.d-amida-asfjh{
+  display: flex;
+}
+.swap-tokens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .swap-tokens h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .swap-tokens div {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .swap-tokens select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .swap-tokens input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .swap-tokens button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .swap-tokens button:hover {
+    background-color: #0056b3;
+  }
+  

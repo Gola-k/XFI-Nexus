@@ -12,7 +12,7 @@ contract Staking is ReentrancyGuard {
     IERC20 public s_stakingToken;
     IERC20 public s_rewardToken;
 
-    uint public constant REWARD_RATE = 1e18;
+    uint public constant REWARD_RATE = 46296296296296;
     uint private totalStakedTokens;
     uint public rewardPerTokenStored;
     uint public lastUpdateTime;
@@ -102,3 +102,7 @@ contract Staking is ReentrancyGuard {
         require(success, "Transfer Failed");
     }
 }
+
+// Staking 0x07eA0AC41dE236f1EC2EB6eDf70dceF2BFbf61f4
+// Reward 0xAF77f4CE0ee047F7191f54b8564eC800DE3CeF5d
+// Stake Token 0x2E33249F0AAB1a41fe4987580bef3A1B8372eC3A

@@ -1,0 +1,27 @@
+.title{
+    font-size: 1em !important;
+}
+
+.description{
+    font-size: .8em !important;
+}
+
+.buttons button{
+    font-size: .8em;
+    padding: 10px;
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.buttons button:hover{
+    background-color: #0055cc;
+}
+
+.buttons button a{
+    color: #fff;
+    text-decoration: none;
+}
