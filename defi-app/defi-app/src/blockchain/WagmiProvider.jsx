@@ -1,29 +1,8 @@
 import { createWeb3Modal } from '@web3modal/wagmi/react'
-import { defaultWagmiConfig } from '@web3modal/wagmi/react/config'
-
 import { WagmiProvider } from 'wagmi'
-import { arbitrum, mainnet } from 'wagmi/chains'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
-import { defineChain } from "viem"
-
-const crossfi = defineChain({
-    id: 4157,
-    name: 'CrossFi Testnet',
-    nativeCurrency: {
-      decimals: 18,
-      name: 'XFI',
-      symbol: 'XFI',
-    },
-    rpcUrls: {
-      default: {
-        http: ['https://rpc.testnet.ms'],
-      },
-    },
-    blockExplorers: {
-      default: { name: 'Explorer', url: 'https://scan.testnet.ms' },
-    },
-  });
+import { config } from './config'
+import { sepolia } from 'wagmi/chains'
 
 // 0. Setup queryClient
 const queryClient = new QueryClient()
@@ -39,19 +18,12 @@ const metadata = {
     icons: ['https://avatars.githubusercontent.com/u/37784886']
 }
 
-const chains = [mainnet, arbitrum, crossfi]
-const config = defaultWagmiConfig({
-    chains,
-    projectId,
-    metadata,
-})
-
 // 3. Create modal
 createWeb3Modal({
     metadata,
     wagmiConfig: config,
     projectId,
-    enableAnalytics: true // Optional - defaults to your Cloud configuration
+    defaultChain: sepolia,
 })
 
 export function Web3Provider({ children }) {

@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './swaptokens.css';
+import { useAccount } from 'wagmi';
 
 const SwapTokens = () => {
   const [fromToken, setFromToken] = useState('XFI');
   const [toToken, setToToken] = useState('TokenY');
   const [amount, setAmount] = useState('');
+
+  const {isDisconnected} = useAccount()
 
   const handleSwap = () => {
     // Implement swapping logic here
@@ -25,7 +28,7 @@ const SwapTokens = () => {
         onChange={(e) => setAmount(e.target.value)}
         placeholder="Enter amount"
       />
-      <button onClick={handleSwap} className='send-btn_1'>send</button>
+      <button onClick={handleSwap} disabled={isDisconnected} className='send-btn_1'>send</button>
       </div>
     </div>
   );
