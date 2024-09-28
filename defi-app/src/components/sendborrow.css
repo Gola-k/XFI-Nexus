@@ -1,0 +1,59 @@
+.buttons-main-deic{
+  display: flex;
+}
+
+.caon-box-mai-dfg{
+  display: flex;
+}
+.in-sjdb-dsfbfj{
+  border: none;
+  outline: none;          
+  background: transparent; 
+  width: auto;         
+  font-size: 86px;      
+  color: white;     
+  appearance: none;  
+}
+.lend-borrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .lend-borrow h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .lend-borrow select,
+  .lend-borrow input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .in-sjdb-dsfbfj{
+    border: none;
+    outline: none;
+    border-top: none;
+  }
+  .lend-borrow button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lend-borrow button:hover {
+    background-color: #0056b3;
+  }
+  

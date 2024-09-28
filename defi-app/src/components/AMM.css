@@ -1,0 +1,299 @@
+/* Keyframes for rotating the blue overlay */
+@keyframes rotateOverlay {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Keyframes for pulsating glow effect */
+@keyframes pulsateGlow {
+    0% {
+        box-shadow: 0 0 5px #00ccff, 0 0 10px #00ccff;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #00ccff, 0 0 30px #00ccff;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #00ccff, 0 0 10px #00ccff;
+    }
+}
+
+/* Keyframes for color shift animation */
+@keyframes colorShift {
+    0% {
+        background-color: #000000;
+    }
+
+    50% {
+        background-color: #001a33;
+    }
+
+    100% {
+        background-color: #000000;
+    }
+}
+
+.faucet-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.to-span {
+    display: block;
+    text-align: center;
+}
+
+.swap-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faucet-buttons button {
+    flex: 1;
+    margin: 0 0.5rem;
+}
+
+.action-content p {
+    margin-top: 0rem;
+    text-align: center;
+    color: #fdffff;
+}
+
+/* Gradient animation for the background */
+/* @keyframes gradientBackground {
+    0% { background: linear-gradient(45deg, #000000, #001a33); }
+    50% { background: linear-gradient(45deg, #001a33, #000000); }
+    100% { background: linear-gradient(45deg, #000000, #001a33); }
+} */
+
+.amm-container {
+    background: linear-gradient(45deg, #000000, rgba(0, 0, 0, .04));
+    color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 350px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    animation: gradientBackground 10s infinite;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fafafa;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #00ccff;
+    margin-bottom: 0.75rem;
+    font-size: 22px;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #d3d3d3;
+    line-height: 1.6;
+}
+
+.action-buttons,
+.buttons-main-deic {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+}
+
+.action-buttons button,
+.buttons-main-deic button {
+    position: relative;
+    background-color: #000000;
+    color: #00ccff;
+    border: 2px solid #00ccff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+    margin: 0 0.75rem;
+}
+
+.action-buttons button::before,
+.buttons-main-deic button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: rgba(0, 204, 255, 0.2);
+    transform: rotate(0deg);
+    z-index: 1;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.action-buttons button:hover::before,
+.buttons-main-deic button:hover::before {
+    animation: rotateOverlay 2s linear infinite;
+}
+
+.action-buttons button span,
+.buttons-main-deic button span {
+    position: relative;
+    z-index: 2;
+}
+
+.action-buttons button:hover,
+.buttons-main-deic button:hover {
+    color: #ffffff;
+    background-color: #00ccff;
+    animation: pulsateGlow 2s infinite;
+    transform: translateY(-2px);
+}
+
+.token-inputs,
+.caon-box-mai-dfg {
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.amount-input,
+select,
+.in-sjdb-dsfbfj {
+    background-color: rgba(0, 0, 0, .04);
+    color: #ffffff;
+    border: 1px solid #fff;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-radius: 13px;
+}
+
+select option {
+    color: #000000;
+}
+
+.amount-input:focus,
+select:focus,
+.in-sjdb-dsfbfj:focus {
+    border-color: #00ccff;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+}
+
+.in-sjdb-dsfbfj {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: auto;
+    font-size: 2.5rem;
+    color: white;
+    appearance: none;
+    border-bottom: 2px solid #00ccff;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+/* Ripple effect */
+button {
+    background-color: #00ccff;
+    color: #000000;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    top: 1rem;
+}
+
+button:hover {
+    background-color: #0099cc;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 204, 255, 0.4);
+}
+
+button:disabled {
+    background-color: #2c2c2c;
+    cursor: not-allowed;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+button:hover::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+
+    20% {
+        transform: scale(25, 25);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .amm-container {
+        padding: 1.5rem;
+    }
+
+    .action-buttons button,
+    .buttons-main-deic button {
+        padding: 0.5rem;
+        margin: 0 0.25rem;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .token-inputs,
+    .caon-box-mai-dfg {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .in-sjdb-dsfbfj {
+        font-size: 2rem;
+    }
+}

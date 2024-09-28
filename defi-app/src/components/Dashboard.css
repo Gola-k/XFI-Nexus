@@ -1,0 +1,27 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dashboard h2 {
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .dashboard_sec {
+    width: 100%;
+  }
+  
+  .dashboard_sec h3 {
+    font-size: .8em;
+    color: #007bff;
+    margin: 4px 0;
+  }
+  
+  .dashboard_p {
+    font-size: .8rem;
+    color: #666;
+    margin: 0;
+  }
+  
