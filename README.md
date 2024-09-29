@@ -1,3 +1,11 @@
+## Overview
+
+XFI Nexus is a decentralized financial platform that offers a suite of DeFi services, including an **Automated Market Maker (AMM)**, **Staking Protocol**, and **Lending & Borrowing Protocol**. The goal is to enhance liquidity, increase the value of the XFI token, and expand across multiple blockchains, making decentralized finance accessible and widely adopted.
+
+## Documentation
+
+- [Marketing Documentation](https://gola-k.github.io/XFI-Nexus/MARKETING.html)
+- [Technical Documentation](https://gola-k.github.io/XFI-Nexus/)
 
 ## Problem Statement
 
