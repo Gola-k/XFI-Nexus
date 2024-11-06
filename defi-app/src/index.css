@@ -128,7 +128,9 @@ input[type="text"] {
   padding: 30px 30px 20px;
   background: rgba(105, 179, 228, 0.03);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 7px 20px 0px #000;
+
+  
   backdrop-filter: blur(3.2px);
   -webkit-backdrop-filter: blur(3.2px);
   border-radius: 10px;
