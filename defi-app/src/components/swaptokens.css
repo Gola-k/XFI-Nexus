@@ -21,7 +21,7 @@
   
   .swap-tokens h2 {
     font-size: 24px;
-    color: #333;
+    color: #fff;
   }
   
   .swap-tokens div {
@@ -51,7 +51,7 @@
   .swap-tokens button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #575758;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -61,6 +61,6 @@
   }
   
   .swap-tokens button:hover {
-    background-color: #0056b3;
+    background-color: #666666;
   }
   
