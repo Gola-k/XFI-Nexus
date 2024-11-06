@@ -23,7 +23,7 @@ createWeb3Modal({
     metadata,
     wagmiConfig: config,
     projectId,
-    // defaultChain: scrollSepolia,
+    defaultChain: config,
 })
 
 // eslint-disable-next-line react/prop-types
