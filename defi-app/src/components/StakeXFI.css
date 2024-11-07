@@ -13,9 +13,10 @@
     margin-top: 20px;
     margin-left: 10px;
     font-size: 1em;
-    background-color: #0066ff;
+    background-color: #575758;
     color: #fff;
     cursor: pointer;
+    width: 60%;
 }
 
 .seperator {

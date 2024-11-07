@@ -21,11 +21,16 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("../src/assets/image/image 2.png");
+  background-image: url("../src/assets/image/image10.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; /* Ensure the image covers the entire section */
+  background-attachment: fixed;
+  /* image-resolution: from-image 300dpi; */
+  /* background: #020817; */
 }
+
+
 
 /* Navbar Styles */
 .navbar {
@@ -76,20 +81,34 @@ input[type="text"] {
 /* Main Content */
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 100px;
   color: #fff;
 }
 
 /* Left Side Content */
 .left-side {
-  flex-basis: 33%;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .left-side span {
   font-family: "Montserrat Alternates", sans-serif;
   font-weight: 100;
   font-style: normal;
 }
+
+.left-side .note{
+  margin:20px 0px 0px;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 16px;
+}
+
 .left-side h1 {
   font-size: 3em;
   margin-bottom: 20px;
@@ -106,14 +125,16 @@ input[type="text"] {
   flex-direction: column; /* Adjusted to stack content vertically */
   justify-content: flex-start;
   align-items: center;
-  padding: 10px 30px;
+  padding: 30px 30px 20px;
   background: rgba(105, 179, 228, 0.03);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 7px 20px 0px #000;
+
+  
   backdrop-filter: blur(3.2px);
   -webkit-backdrop-filter: blur(3.2px);
   border-radius: 10px;
-  width: 400px; /* Defines the width for the entire button area */
+  width: 550px; /* Defines the width for the entire button area */
   position: relative;
   overflow: hidden;
   margin-top: 20px; 
@@ -124,8 +145,22 @@ input[type="text"] {
 .buttons-wrapper {
   display: flex;
   height: auto;
-  /* margin-left: -40px; */
-  margin-bottom: 5%;
+}
+
+button{
+  top: 0 !important;
+}
+
+.dynamic-component{
+  margin-top: 30px;
+  width: 100%;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  width: 100%;
+  text-align: center;
 }
 
 /* When all buttons are shown, expand the width with smooth animation */
@@ -135,19 +170,20 @@ input[type="text"] {
 
 /* Individual Token Button */
 .token-button {
-  background-color: #0d0f18;
+  background-color: #4d4d4d;
   color: #fff;
-  border: 1px solid #0066ff;
+  border: 1px solid #5d5d5e;
   border-radius: 50px;
-  padding: 2px 20px;
+  padding: 10px 20px;
   font-size: 0.9rem;
-  margin: 5px 0 10px 20px;
+  margin: 0px 15px 0px 0px;
   cursor: pointer;
   transition: background-color 0.3s;
   text-align: center;
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.3s, transform 0.3s;
+  top: 0;
 }
 
 .token-button:nth-child(-n + 2) {
@@ -227,13 +263,13 @@ input[type="text"] {
 }
 
 /* Right Side Content */
-.right-side {
+/* .right-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 -60px 0 0px;
-}
+} */
 
 .stats {
   margin: 30px;

@@ -103,7 +103,7 @@ const StakeXFI = () => {
 
   return (
     <div className="stake-xfi">
-      <button className='send-btn_1' onClick={handleGetToken}>Get Token</button>
+      
       <hr className='seperator' />
       <h2>Stake XFI  -  <small>Your Balance: {(parseInt(stakeSTKBalance) / (10 ** 18)) || 0} STK</small></h2>
       <input
@@ -125,10 +125,15 @@ const StakeXFI = () => {
         className="input-field"
       />
       <br />
-      <span>If you withdraw token before 2 days of staking, you will get 10% penalty</span> <br />
+      <p className='note'>If you withdraw token before 2 days of staking, you will get 10% penalty</p> <br />
       <button onClick={handleWithdraw} disabled={isDisconnected} className='send-btn_1' >Withdraw</button>
+
+
       {/* <hr className='seperator' />
       <button disabled={isDisconnected} className='send-btn_1' >Get Reward</button> */}
+
+      <hr className='seperator' />
+      <button className='send-btn_1' onClick={handleGetToken}>Get Token</button>
     </div>
   );
 };

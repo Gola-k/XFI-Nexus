@@ -72,7 +72,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="right-side">
+        {/* <div className="right-side">
           <div className="stats">
             <h1>$76 Billion</h1>
             <h1>24h trading volume</h1>
@@ -85,7 +85,7 @@ const Navbar = () => {
               height={200}
               width={200} />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
