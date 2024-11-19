@@ -1,5 +1,6 @@
 import StakeToken from "./StakeToken.json";
 import Staking from "./Staking.json";
+import RewardToken from "./RewardToken.json"
 import AMM from './AMM.json'
 
 import mockXFI from './MockXFI.json';
